@@ -4,8 +4,6 @@ from email.mime.text import MIMEText
 from email.header import Header
 from smtplib import SMTP_SSL
 
-now= time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
-
 headers = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0'}
 
@@ -25,6 +23,7 @@ print(url)
 
 if __name__ == "__main__":
     while True:
+        now= time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
         kuaidi = []
         response = requests.get(url, headers=headers)
         response.encoding = 'gb18030'
