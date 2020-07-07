@@ -5,4 +5,5 @@ while True:
     hostname = socket.gethostname()
     pyautogui.click(797,657,button='left')
     pyautogui.typewrite('Send at:'+now +'  on'+hostname+'  for weichijunliaochiyan(wobuhuifanyi)')
+    pyautogui.typewrite(['enter'])
     time.sleep(600)
