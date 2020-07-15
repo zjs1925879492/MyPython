@@ -12,7 +12,7 @@ sender_qq = 'Your QQ email ID xxxxxxxxx@qq.com'
 #pwd为qq邮箱的授权码
 pwd = 'Your SMTP password ****************'
 #收件人邮箱
-receiver = 'receiver's E-mail address'
+receiver = 'receiver’s E-mail address'
 def send(ip):
     print (ip[0])
     hostname = socket.gethostname()
@@ -33,9 +33,9 @@ def send(ip):
 
     msg = MIMEText(mail_content, "plain", 'utf-8')
     msg["Subject"] = Header(mail_title, 'utf-8')
-    msg["From"] = sender_qq_mail
+    msg["From"] = sender_qq
     msg["To"] = receiver
-    smtp.sendmail(sender_qq_mail, receiver, msg.as_string())
+    smtp.sendmail(sender_qq, receiver, msg.as_string())
     smtp.quit()
 
 while True:
